@@ -1,0 +1,70 @@
+{
+  "version": "0.1.0",
+  "name": "solana_voting_app",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "voteAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "voteRepublicians",
+      "accounts": [
+        {
+          "name": "voteAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "voteDemocrats",
+      "accounts": [
+        {
+          "name": "voteAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "VoteAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "republicians",
+            "type": "u64"
+          },
+          {
+            "name": "democrats",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "HBXJPm5iV3YB6HXpgiHnXbRcqgSf92xeHR8Bex8qGVSV"
+  }
+}

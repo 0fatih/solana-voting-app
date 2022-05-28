@@ -1,0 +1,14 @@
+[features]
+seeds = false
+[programs.localnet]
+solana_voting_app = "HBXJPm5iV3YB6HXpgiHnXbRcqgSf92xeHR8Bex8qGVSV"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/Users/fatihfurkanhatipoglu/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
